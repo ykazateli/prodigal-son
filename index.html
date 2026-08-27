@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Возвращение блудного сына | Указатели</title>
+    <style>
+        /* Обнуляем отступы, чтобы пазл был на весь экран */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 10px;
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+        }
+
+        .puzzle-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            height: 90vh;
+            max-height: 900px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            background: #2a2a2a;
+        }
+
+        .puzzle-container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Смещаем iframe вверх, чтобы скрыть длинное название файла */
+        .puzzle-frame {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            width: 100%;
+            height: calc(100% + 40px);
+            border: none;
+            display: block;
+        }
+
+        /* Ссылка на «Указатели» — поверх пазла */
+        .brand-link {
+            position: absolute;
+            top: 14px;
+            left: 18px;
+            z-index: 10;
+            color: rgba(255, 255, 255, 0.85);
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(6px);
+            padding: 5px 14px 5px 10px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 400;
+            text-decoration: none;
+            letter-spacing: 0.3px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background 0.25s, color 0.25s, transform 0.2s;
+            white-space: nowrap;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .brand-link:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            transform: scale(1.02);
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 6px; }
+            .puzzle-wrapper { height: 92vh; max-height: none; border-radius: 8px; }
+            .brand-link {
+                top: 10px;
+                left: 12px;
+                font-size: 0.7rem;
+                padding: 3px 10px 3px 8px;
+                backdrop-filter: blur(4px);
+            }
+            .puzzle-frame {
+                top: -35px;
+                height: calc(100% + 35px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="puzzle-wrapper">
+        <div class="puzzle-container">
+            <!-- ВСТАВЬТЕ ССЫЛКУ НА ВАШ ПАЗЛ НИЖЕ (в src=...) -->
+            <iframe
+                src="https://www.jigsawplanet.com/?rc=play&amp;pid=01732fcbd954&amp;view=iframe"
+                class="puzzle-frame"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- Ссылка на «Указатели» -->
+        <a href="https://vk.com/ykazateli_of_christ" target="_blank" class="brand-link">
+            🕯️ Библейская студия анимации «Указатели»
+        </a>
+    </div>
+
+</body>
+</html>
